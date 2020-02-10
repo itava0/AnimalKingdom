@@ -62,6 +62,11 @@ public class Main {
         animalList.sort((a, b)-> a.move().compareToIgnoreCase(b.move()));
         System.out.println(animalList);
 
+        System.out.println("\n*** List only those animals the breath with lungs ***");
+        printAnimals(animalList, a -> a.breath() == "breath with lungs");
+
+        System.out.println("\n*** List only those animals that breath with lungs and were named in 1758 ***");
+        printAnimals(animalList, a -> a.breath() == "breath with lungs" && a.getYear() == 1758);
     }
 }
 
