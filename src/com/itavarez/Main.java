@@ -4,6 +4,14 @@ import java.util.ArrayList;
 
 public class Main {
 
+    public static void printAnimals(ArrayList<Animal> animal, CheckAnimal tester) {
+        for (Animal a : animal) {
+            if (tester.test(a)) {
+                System.out.println(a.getName() + ", " + a.getYear());
+            }
+        }
+    }
+
     public static void main(String[] args) {
         Mammals panda = new Mammals("Panda", 1869, 10);
         Mammals zebra = new Mammals("Zebra", 1778, 13);
@@ -49,6 +57,11 @@ public class Main {
         System.out.println("\n*** List all the animals alphabetically ***");
         animalList.sort((a, b) -> a.getName().compareToIgnoreCase(b.getName()));
         System.out.println(animalList);
+
+        System.out.println("\n*** List all the animals order by how they move ***");
+        animalList.sort((a, b)-> a.move().compareToIgnoreCase(b.move()));
+        System.out.println(animalList);
+
     }
 }
 
