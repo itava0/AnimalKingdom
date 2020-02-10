@@ -45,6 +45,10 @@ public class Main {
         System.out.println("\n*** List all the animals in descending order by year named ***");
         animalList.sort((a, b) -> b.getYear() - a.getYear());
         System.out.println(animalList.toString());
+
+        System.out.println("\n*** List all the animals alphabetically ***");
+        animalList.sort((a, b) -> a.getName().compareToIgnoreCase(b.getName()));
+        System.out.println(animalList);
     }
 }
 
