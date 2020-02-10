@@ -1,5 +1,7 @@
 package com.itavarez;
 
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -20,6 +22,25 @@ public class Main {
         Fish salmon = new Fish("Salmon", 1758, 12);
         Fish catfish = new Fish("Catfish", 1817, 12);
         Fish perch = new Fish("Perch", 1758, 12);
+
+        //New array with all the animal
+        ArrayList<Animal> animalList = new ArrayList<Animal>();
+        animalList.add(panda);
+        animalList.add(zebra);
+        animalList.add(koala);
+        animalList.add(sloth);
+        animalList.add(armadillo);
+        animalList.add(raccoon);
+        animalList.add(bigfoot);
+        animalList.add(pigeon);
+        animalList.add(peacock);
+        animalList.add(toucan);
+        animalList.add(parrot);
+        animalList.add(swan);
+        animalList.add(salmon);
+        animalList.add(catfish);
+        animalList.add(perch);
+
     }
 }
 
