@@ -41,6 +41,10 @@ public class Main {
         animalList.add(catfish);
         animalList.add(perch);
 
+        System.out.println(animalList.toString());
+        System.out.println("\n*** List all the animals in descending order by year named ***");
+        animalList.sort((a, b) -> b.getYear() - a.getYear());
+        System.out.println(animalList.toString());
     }
 }
 

@@ -34,4 +34,14 @@ public class Birds extends Animal {
     public int getYear() {
         return year;
     }
+
+    @Override
+    public String toString() {
+        return "Birds{" +
+                "name='" + name + '\'' +
+                ", year=" + year + '\'' +
+                "energy=" + energy + '\'' +
+                ", id=" + id +
+                '}';
+    }
 }
