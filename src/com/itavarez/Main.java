@@ -70,6 +70,10 @@ public class Main {
 
         System.out.println("\n*** List only those animals that lay eggs and breath with lungs ***");
         printAnimals(animalList, a -> a.reproduce() == "eggs" && a.breath() == "breath with lungs");
+
+        System.out.println("\n*** List alphabetically only those animals that were named in 1758 ***");
+        animalList.sort((a, b) -> a.getName().compareToIgnoreCase(b.getName()));
+        printAnimals(animalList, a -> a.getYear() == 1758);
     }
 }
 
