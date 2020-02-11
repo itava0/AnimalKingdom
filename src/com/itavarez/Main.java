@@ -74,6 +74,10 @@ public class Main {
         System.out.println("\n*** List alphabetically only those animals that were named in 1758 ***");
         animalList.sort((a, b) -> a.getName().compareToIgnoreCase(b.getName()));
         printAnimals(animalList, a -> a.getYear() == 1758);
+
+        System.out.println("\n*** List alphabetically those animals that are mammals ***");
+        animalList.sort((a, b) -> a.getName().compareToIgnoreCase(b.getName()));
+        printAnimals(animalList, a -> a instanceof Mammals);
     }
 }
 
