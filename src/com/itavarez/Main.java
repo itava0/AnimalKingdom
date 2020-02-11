@@ -67,6 +67,9 @@ public class Main {
 
         System.out.println("\n*** List only those animals that breath with lungs and were named in 1758 ***");
         printAnimals(animalList, a -> a.breath() == "breath with lungs" && a.getYear() == 1758);
+
+        System.out.println("\n*** List only those animals that lay eggs and breath with lungs ***");
+        printAnimals(animalList, a -> a.reproduce() == "eggs" && a.breath() == "breath with lungs");
     }
 }
 
